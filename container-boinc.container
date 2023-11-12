@@ -1,0 +1,22 @@
+[Unit]
+Description=A containerized BOINC client service. https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html
+
+[Container]
+Image=localhost/boinc/client:amd
+ContainerName=boinc
+
+#Define Devices
+AddDevice=/dev/dri
+AddDevice=/dev/kfd
+
+#Define the Volumes and Networks
+Volume=/var/lib/boinc:/var/lib/boinc:Z,shared
+Network=host
+
+#Define Environment Variables
+Environment=BOINC_GUI_RPC_PASSWORD="123"
+Environment=BOINC_CMD_LINE_OPTIONS="--allow_remote_gui_rpc"
+
+[Install]
+# Start by default on boot
+WantedBy=multi-user.target default.target
