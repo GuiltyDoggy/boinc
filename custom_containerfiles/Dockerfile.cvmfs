@@ -1,0 +1,22 @@
+FROM boinc/client:amd
+
+LABEL maintainer="BOINC" \
+      description="CVMFS-savvy BOINC client."
+
+WORKDIR /var/lib/boinc
+
+# Install Prerequisites
+RUN apt-get update && apt-get install -y \
+wget \
+lsb-release
+
+# Install CVMFS
+ADD cvmfs-release-latest_all.deb .
+RUN dpkg -i cvmfs-release-latest_all.deb
+RUN apt-get update && apt-get install -y cvmfs
+
+# Copy files
+COPY default.local /etc/cvmfs/default.local
+
+# Cleanup
+RUN rm -f cvmfs-release-latest_all.deb
