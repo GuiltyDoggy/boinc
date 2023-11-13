@@ -34,3 +34,4 @@ make
 # Install
 cd client
 cp boinc /build
+cp boinccmd /build

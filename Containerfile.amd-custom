@@ -17,6 +17,7 @@ ENV BOINC_GUI_RPC_PASSWORD="123" \
 # Copy files
 ADD boinc-client-docker/bin/ /usr/bin/
 ADD build/boinc /usr/bin/boinc
+ADD build/boinccmd /usr/bin/boinccmd
 
 # Configure
 WORKDIR /var/lib/boinc
