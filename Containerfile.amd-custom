@@ -1,0 +1,35 @@
+####################################################################################################################
+# Install instructions: https://rocm.github.io/ROCmInstall.html                                                    #
+# ROCm Docker base image: https://github.com/RadeonOpenCompute/ROCm-docker/blob/master/dev/Dockerfile-ubuntu-22.04 #
+# ROCm Docker template: https://github.com/RadeonOpenCompute/ROCm-docker/blob/master/rocm-terminal/Dockerfile      #
+####################################################################################################################
+FROM rocm/dev-ubuntu-22.04
+
+LABEL maintainer="Yosuke Matsumura" \
+      description="AMD OpenCL-savvy BOINC client with locally-build boinc client binary."
+
+# Global environment settings
+ENV BOINC_GUI_RPC_PASSWORD="123" \
+    BOINC_REMOTE_HOST="127.0.0.1" \
+    BOINC_CMD_LINE_OPTIONS="" \
+    DEBIAN_FRONTEND=noninteractive
+
+# Copy files
+ADD boinc-client-docker/bin/ /usr/bin/
+ADD build/boinc /usr/bin/boinc
+
+# Configure
+WORKDIR /var/lib/boinc
+
+# BOINC RPC port
+EXPOSE 31416
+
+# Install
+RUN apt-get update && apt-get install -y --no-install-recommends \
+# Install Time Zone Database
+    tzdata && \
+# Cleaning up
+    apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/*
+
+CMD ["start-boinc.sh"]
