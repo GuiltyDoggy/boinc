@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set the desired version
+RELEASE_VER="client_release/7.24/7.24.1"
+
 # Install pre-req packages
 apt update
 apt upgrade -y
@@ -20,7 +23,7 @@ cd /boinc
 git clean -f -d -x
 
 # Check out desired version
-git checkout client_release/7.24/7.24.1
+git checkout $RELEASE_VER
 
 # Build
 ./_autosetup
