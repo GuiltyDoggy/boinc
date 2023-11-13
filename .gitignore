@@ -1,4 +1,5 @@
 .env
+boinc
 boinc-client-docker
 boinc_data
 cvmfs
