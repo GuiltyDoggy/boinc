@@ -2,7 +2,7 @@
 Description=A containerized BOINC client service. https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html
 
 [Container]
-Image=localhost/boinc/client:amd
+Image=docker.io/guiltydoggy/boinc-client:amd
 ContainerName=boinc
 
 #Define Devices
