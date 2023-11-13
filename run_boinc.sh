@@ -10,4 +10,4 @@ podman run -d \
   -v "$PWD"/boinc_data:/var/lib/boinc:Z,shared \
   -e BOINC_GUI_RPC_PASSWORD="59e9117580b8e0622382992315b2f106" \
   -e BOINC_CMD_LINE_OPTIONS="--allow_remote_gui_rpc" \
-boinc/client:amd
+guiltydoggy/boinc-client:amd
