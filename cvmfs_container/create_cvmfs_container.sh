@@ -7,5 +7,5 @@ podman run -d --rm \
   -e CVMFS_HTTP_PROXY=DIRECT \
   --cap-add SYS_ADMIN \
   --device /dev/fuse \
-  --volume "$PWD"/cvmfs:/cvmfs:Z,shared \
+  --volume "$PWD"/../cvmfs:/cvmfs:Z,shared \
 cvmfs/service:latest
