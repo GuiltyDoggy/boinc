@@ -31,7 +31,8 @@ tar -xzf /source.tgz
 # Build
 cd /boinc-client_release*
 ./_autosetup
-./configure --disable-server --disable-manager \
+./configure --disable-server \
+    --disable-manager --with-gtk --disable-shared \
     CXXFLAGS="-O3"
 make
 
