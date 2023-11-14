@@ -16,7 +16,8 @@ dnf install -y git \
     wxGTK \
     wxGTK-devel \
     libcurl-devel \
-    freeglut-devel
+    freeglut-devel \
+    libXmu-devel
 
 # Clone the source code repo
 git clone https://github.com/BOINC/boinc /boinc
@@ -28,7 +29,7 @@ git checkout $RELEASE_VER
 
 # Build
 ./_autosetup
-./configure --disable-server --disable-manager --enable-client \
+./configure --disable-server \
     CXXFLAGS="-O3"
 make
 

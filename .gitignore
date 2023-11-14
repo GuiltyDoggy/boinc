@@ -4,5 +4,6 @@ boinc-client-docker
 boinc_data
 cvmfs
 build/boinc
+build/boinc_client
 build/boinccmd
 build/boincmgr
