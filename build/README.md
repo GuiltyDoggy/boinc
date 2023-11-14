@@ -1,5 +1,5 @@
 Run the following from this directory:
-`podman run -it --rm -v .:/build:Z,shared ubuntu`
+`podman run -it --rm -v .:/build:Z,shared fedora`
 
 This will create an Ubuntu container from which we can build the boinc client. Once in the container, this folder will be mounted at `/build` - go to this directory from within the container.
 
