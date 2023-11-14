@@ -29,13 +29,10 @@ git checkout $RELEASE_VER
 
 # Build
 ./_autosetup
-./configure --disable-server \
+./configure --disable-server --disable-manager \
     CXXFLAGS="-O3"
 make
 
 # Install
-cd client
-cp boinc /build
-cp boinccmd /build
-cd ../clientgui
-cp boincmgr /build
+make install
+cp --update=all /usr/local/bin/* /build
