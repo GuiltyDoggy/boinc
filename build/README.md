@@ -1,7 +1,7 @@
 Run the following from this directory:
-`podman run -it --rm -v .:/build:Z,shared fedora`
+`podman run -it --rm -v .:/build:Z,shared ubuntu`
 
-This will create a Fedora container from which we can build the boinc client. Once in the container, this folder will be mounted at `/build` - go to this directory from within the container.
+This will create a Ubuntu container from which we can build the boinc client. Once in the container, this folder will be mounted at `/build` - go to this directory from within the container.
 
 Modify the `build_boinc.sh` script and change the RELEASE_VER to the desired source tarball (can be found from the BOINC Github releases page - choose the .tar.gz. 
 
