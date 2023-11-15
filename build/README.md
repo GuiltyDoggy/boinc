@@ -1,5 +1,6 @@
 Run the following from this directory:
 `podman run -it --rm -v .:/build:Z,shared ubuntu`
+or `podman run -it --rm -v .:/build:Z,shared guiltydoggy/boinc-builder` for an image with the packages pre-installed.
 
 This will create a Ubuntu container from which we can build the boinc client. Once in the container, this folder will be mounted at `/build` - go to this directory from within the container.
 
