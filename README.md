@@ -15,3 +15,5 @@ Steps to use:
 3. Run ./push_to_dockerhub.sh from this directory (modify this first to your personal container registry of choice).
 4. Run ./run_boinc.sh from this directory. This will create a container which runs the boinc client. Modify this script to pull from your container registry.
 5. Use whichever Boinc Manager you want to connect to the client, now running on localhost, using the RPC password defined in run_boinc.sh
+
+note: this is just a pet project -- don't expect support.
