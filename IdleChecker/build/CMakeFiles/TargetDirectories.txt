@@ -1,0 +1,7 @@
+/build/build/CMakeFiles/uninstall.dir
+/build/build/CMakeFiles/fetch-translations.dir
+/build/build/CMakeFiles/kidletest.dir
+/build/build/CMakeFiles/test.dir
+/build/build/CMakeFiles/edit_cache.dir
+/build/build/CMakeFiles/rebuild_cache.dir
+/build/build/CMakeFiles/kidletest_autogen.dir

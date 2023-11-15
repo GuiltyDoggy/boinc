@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+f6bd9ec012631201b2a52b6c98213572 CMakeFiles/fetch-translations
+6b5d0a2d403f049089070ca54dab8942 CMakeFiles/kidletest_autogen
+db4f2c5b157a8175134c5734b0488db8 CMakeFiles/uninstall
+eadaf34f3fd27ea3d4db89447a7d43b2 releaseme
