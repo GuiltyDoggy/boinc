@@ -33,7 +33,7 @@ cd /boinc-client_release*
 ./_autosetup
 ./configure --disable-server \
     --disable-manager --with-gtk --disable-shared \
-    CXXFLAGS="-O3"
+    CXXFLAGS="-O2 -pipe"
 make
 
 
