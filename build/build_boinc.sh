@@ -8,7 +8,8 @@ cd /
 # Install pre-req packages
 apt update
 apt upgrade -y
-apt install -y git \
+apt install -y \
+    git \
     python3 \
     make \
     m4 \
@@ -20,6 +21,12 @@ apt install -y git \
     g++ \
     curl
 
+# Packages for Manager
+# apt install -y \
+#   libwxgtk-webview3.0-gtk3-dev \
+#   freeglut3-dev \
+#   libxss-dev
+
 # Download and extract the source tarball
 curl -o /source.tgz -L $RELEASE_VER
 tar -xzf /source.tgz
@@ -27,7 +34,7 @@ tar -xzf /source.tgz
 # Build
 cd /boinc-client_release*
 ./_autosetup
-./configure --disable-server --disable-manager --enable-client \
+./configure --enable-optimize --disable-server --disable-manager --enable-client \
     CXXFLAGS="-O2 -pipe"
 make
 
